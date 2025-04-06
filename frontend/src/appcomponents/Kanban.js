@@ -46,7 +46,6 @@ const Kanban = () => {
     const draggedTask = tasks.find((task) => task._id === draggableId);
     if (!draggedTask) return;
   
-    // Moving across columns
     if (destination.droppableId !== source.droppableId) {
       try {
         const updatedTask = {
@@ -65,7 +64,6 @@ const Kanban = () => {
         console.error("Error updating task status:", error);
       }
     } else {
-      // Reordering within the same column
       const colTasks = tasks.filter((task) => task.status === source.droppableId);
       const reorderedColTasks = reorder(colTasks, source.index, destination.index);
   
@@ -110,7 +108,7 @@ const Kanban = () => {
     }
   };
 
-  const columns = getColumns(); // Call the function here so it's always fresh
+  const columns = getColumns(); 
 
   return (
     <div>

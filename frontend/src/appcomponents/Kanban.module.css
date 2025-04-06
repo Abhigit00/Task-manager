@@ -1,6 +1,6 @@
 .boardContainer {
   display: flex;
-  justify-content: center; /* ✅ Center columns */
+  justify-content: center; 
   gap: 20px;
   align-items: flex-start;
   padding: 20px;
